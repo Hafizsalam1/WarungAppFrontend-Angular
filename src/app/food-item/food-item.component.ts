@@ -1,0 +1,23 @@
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FoodItem } from '../FoodItem';
+
+@Component({
+  selector: 'app-food-item',
+  standalone: true,
+  imports: [CommonModule],
+  template:  `
+  <section class="listing">
+    <img class="listing-photo" [src]="FoodItem.photo" alt="Exterior photo of {{FoodItem.name}}">
+    <h2 class="listing-heading">{{ FoodItem.name }}</h2>
+    <p class="listing-heading">Price: {{FoodItem.price}}</p>
+    <p class="listing-heading">Stock: {{FoodItem.stock}}</p>
+  </section>
+  `,
+  styleUrls: ['./food-item.component.css']
+})
+export class FoodItemComponent {
+
+  @Input() FoodItem!: FoodItem;
+
+}
