@@ -4,5 +4,6 @@ export interface FoodItem {
     price: number;
     photo: string;
     stock: number;
+    description: string;
 
 }

@@ -14,22 +14,24 @@ export class FoodService {
     name: 'Sushi',
     price: 120000,
     photo: 'assets/sushi.jpg',
-    stock: 100
+    stock: 100,
+    description:"Sushi roll"
   }, 
   {
     id: 1,
     name: 'Ramen',
     price: 86000,
     photo: 'assets/ramen.jpg',
-    stock: 100
-
+    stock: 100,
+    description:"Miso Ramen"
   }, 
 {
   id: 2,
   name: 'Salad',
   price: 20000,
   photo: 'assets/sald.jpg',
-  stock: 100
+  stock: 100,
+  description:"Cold spicy salad with chicken"
 
 },
 {
@@ -37,7 +39,9 @@ export class FoodService {
   name: 'Sate',
   price: 77000,
   photo: 'assets/sate.jpg',
-  stock: 100
+  stock: 100,
+  description:"Taichan satai"
+
 
 },
 {
@@ -45,7 +49,8 @@ export class FoodService {
   name: 'Nasi Goreng',
   price: 45000,
   photo: 'assets/nasgor.jpg',
-  stock: 100
+  stock: 100,
+  description:"Nasi Goreng with egg"
 }
 ];
 
@@ -53,7 +58,7 @@ export class FoodService {
     return this.FoodItemList
   }
 
-  getHousingLocationById(id: number): FoodItem | undefined {
+  getFoodById(id: number): FoodItem | undefined {
     return this.FoodItemList.find(FoodItem => FoodItem.id === id)
   }
 }
